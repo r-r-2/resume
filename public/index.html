@@ -109,7 +109,7 @@ svg text.t{font:14px var(--sans);fill:#1A1F2B} svg text.ts{font:12px var(--sans)
 :root{--navh:52px;--gut:clamp(20px,4vw,72px)}
 @media (max-width:959px){:root{--navh:47px}}
 html{scroll-snap-type:y mandatory;scroll-padding-top:var(--navh)}
-@media (max-width:959px),(max-height:620px){html{scroll-snap-type:y proximity}}
+@media (max-width:959px),(max-height:620px){html{scroll-snap-type:none}}
 .stop{position:relative;min-height:calc(100svh - var(--navh) - env(safe-area-inset-top,0px));display:flex;align-items:center;scroll-snap-align:start;scroll-snap-stop:always;padding-block:clamp(20px,5vh,64px)}
 .stop>.wrap{width:100%}
 .wrap{max-width:1560px;margin:0 auto;padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
