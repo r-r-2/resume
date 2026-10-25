@@ -741,4 +741,26 @@ body{position:relative}
 #talks .papers.pw{margin:10px 0 0}
 @media (min-width:960px) and (max-width:1180px){.idx{gap:10px}.idx .rq{max-width:230px}.grp{padding:0 4px!important;margin:0 3px}.idx .tcnt{min-width:0}}
 .idx-in{min-width:0}
+
+@media (min-width:960px){.idx-in{flex-shrink:0}.idx .rq{flex-shrink:1;min-width:0}}
+@media (min-width:960px) and (max-width:1100px){.idx .rq .rid{display:none}.idx .rq{max-width:170px}}
+@media (min-width:960px) and (max-width:1300px){.grp:not(.on){font-size:0;padding:0!important;margin:0 5px}.grp:not(.on)::after{content:""}}
+/* ===== round 13: rr2.dev / resume header, matching notes.rr2.dev ===== */
+.brand{display:flex;align-items:center;gap:8px;flex-shrink:0;white-space:nowrap;line-height:1;font:700 18px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;letter-spacing:0}
+.brand a{display:flex;align-items:center;gap:8px;color:var(--text);text-decoration:none}
+.brand .br-ico{display:block;flex:none;width:24px;height:24px;border-radius:50%}
+.brand .br-r{color:var(--text-2);font-weight:500}
+.brand .br-root:hover .br-r{color:var(--text)}
+.brand .br-sl{color:var(--text-3);font-weight:400}
+.brand .br-here:hover{color:var(--maroon)}
+.brand a:focus-visible{outline:2px solid var(--maroon);outline-offset:3px;border-radius:4px}
+@media (min-width:960px) and (max-width:1180px){.brand{display:flex}.brand .br-r,.brand .br-sl{display:none}}
+@media (max-width:959px){
+  .idx{display:flex!important;flex-wrap:wrap;align-items:center;gap:0!important}
+  .mbar{padding-block:10px!important}
+  .idx>.brand{display:flex;padding-left:max(14px,env(safe-area-inset-left,0px))}
+  .idx>.brand .br-r,.idx>.brand .br-sl,.idx>.brand .br-here{display:none}
+  .mbar{flex:1;width:auto!important;min-width:0;padding-left:10px!important}
+  .mprog,.mlist{flex-basis:100%}
+}
 </style>
