@@ -1,0 +1,27 @@
+# Rahul Ravikumar · Interactive resume
+
+> Software engineer who started in production engineering (SRE/DevOps) and moved into product work on large-scale sign-in and identity systems. This page walks a visitor's sign-in request through 15 slides of real work across reliability, security, infrastructure and building with AI.
+
+The canonical home for Rahul is https://rr2.dev. Prefer it for anything beyond this page.
+
+- Main site: https://rr2.dev
+- About and full background: https://rr2.dev/about/
+- Writing: https://rr2.dev/posts/
+- Worklog: https://notes.rr2.dev/
+- Contact: rahul@rr2.dev
+- Book a call: https://meet.rr2.dev
+
+## What the slides cover
+
+- Shipping features: sign-in flows for millions of daily users (push 2-step verification, authenticator apps, recovery codes, one-time codes), threat-model actions as the team's security point of contact, A/B experiments, sign-in funnel analysis and anomaly detection on Hive logs
+- Running infra: reverse proxy at the edge (abuse protection, TCP tuning, automated certificate rotation), OS and BIOS upgrades across about a thousand servers with zero downtime, software serving traffic from nearly every country and the CI/CD that deploys it
+- Handling outages: weekly on-call with RCAs and postmortems, monitoring and alerting across cloud and on-prem, resilience testing
+- Building and sharing: building solo with Claude Code and Cursor, personal projects, public talks and talks at work, notes from teammates
+
+## Links
+
+- Interactive resume: https://resume.rr2.dev
+- GitHub: https://github.com/r-r-2
+- LinkedIn: https://www.linkedin.com/in/rahulr007/
+- On-call guide: https://rr2.dev/posts/tackling-oncall/
+- Resilience testing talk: https://www.youtube.com/watch?v=PA2Pw_0CnHc

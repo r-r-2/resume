@@ -56,5 +56,6 @@ pv.mkdir(exist_ok=True)
 (pv / "index.html").write_text(fragment)
 for name in ("app.js", "land.js"):
     (pv / name).write_text((ROOT / "public" / name).read_text())
-(pv / "favicon.ico").write_bytes((ROOT / "public" / "favicon.ico").read_bytes())
+for name in ("favicon.ico", "rahul.webp"):
+    (pv / name).write_bytes((ROOT / "public" / name).read_bytes())
 print("built", len(full), "bytes")

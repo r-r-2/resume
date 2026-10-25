@@ -61,6 +61,10 @@ This repo and the site are public. Before writing or committing anything, check 
 | `src/sprite.html` | SVG icons (`#i-…`) |
 | `public/app.js` | All behaviour: slide modules (`S.<id>`), progress bars, the request status pill and marker dot, the Summary ring |
 | `public/land.js` | World map data |
+| `public/rahul.webp` | Rahul's illustrated photo (On-call chat, Summary centre) |
+| `public/og.png` | 1200×630 link-preview image (Open Graph and Twitter tags in `src/page.html`) |
+| `public/llms.txt` | Plain-text summary for AI tools; points back to rr2.dev |
+| `public/favicon.ico` | Site icon, same as rr2.dev |
 | `build.py` | Assembles `public/index.html` (and `preview/`), and adds a version tag to the script URLs |
 | `check.py` | Headless screenshots |
 | `wrangler.jsonc`, `worker/index.js` | Cloudflare Worker serving `public/` at `resume.rr2.dev` |
@@ -85,7 +89,7 @@ Build with `python3 build.py`. Preview with `python3 -m http.server 8000 -d publ
 | 12 | `ai` | Building with AI | Building and sharing | Building: Personal projects, AI |
 | 13 | `talks` | Talks | Building and sharing | none, covered by "Also: talks, mentoring and hiring." |
 | 14 | `notes` | Notes from teammates | Building and sharing | none (testimonials) |
-| 15 | `summary` | One engineer, every layer | Building and sharing | the ring itself |
+| 15 | `summary` | One engineer, every layer | Building and sharing | the ring itself (sector names on the ring, items in the legend below it) |
 
 Cert rotation (Infrastructure) comes from the Edge slide.
 
