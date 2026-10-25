@@ -1,0 +1,9 @@
+{
+  // Cloudflare Worker serving the static journey at resume.rr2.dev.
+  // Phase 2 adds /api/ask to src/index.js; static files keep being served from ./public.
+  "name": "resume",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./public", "not_found_handling": "single-page-application" },
+  "routes": [{ "pattern": "resume.rr2.dev", "custom_domain": true }]
+}
