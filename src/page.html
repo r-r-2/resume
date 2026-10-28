@@ -833,4 +833,26 @@ body{position:relative}
 #talks .rsvg .seat.on text{fill:#1A1F2B;font-weight:700}
 #talks .raud{display:none;margin:0;font-size:13px;color:var(--ink-2)}
 @media (max-width:720px){#talks .room{grid-template-columns:1fr;gap:8px}#talks .rpills{flex-direction:row;flex-wrap:wrap}#talks .rpills button{padding:6px 10px;font-size:12.5px}#talks .rsvg{display:none}#talks .raud{display:block}}
+
+/* phones keep real-phone proportions on small screens; narrow columns scale the whole phone down */
+@media (max-width:600px){
+  #auth .dev,#experiments .col .dev{width:156px;max-width:none;flex:none}
+  #auth .dev .ph,#experiments .col .dev .ph{display:flex;flex-direction:column;flex:none;min-height:0}
+  #auth .dev .ph{aspect-ratio:1/1.95}
+  #experiments .col .dev .ph{aspect-ratio:1/2.05}
+  #auth .dev .scr,#experiments .col .dev .scr{min-height:0!important;flex:1 1 auto;overflow:hidden}
+  #experiments .dev .scr{padding:8px 8px 8px!important}
+  #experiments .dev .card{margin-top:6px!important}
+  #experiments .dev .shd{width:26px;height:26px;margin-bottom:4px}
+  #experiments .dev .card .q{min-height:5.2em!important;font-size:12px!important;line-height:1.3}
+  #experiments .dev .num{margin:2px 0 6px}
+  #experiments .dev .b1,#experiments .dev .b2{padding:5px}
+  #experiments .dev .b3{margin-top:4px}
+  #auth .dev .card{margin-top:12px}
+}
+@media (max-width:413px){#experiments .col .dev{zoom:.95}}
+@media (max-width:399px){#experiments .col .dev{zoom:.89}}
+@media (max-width:379px){#experiments .col .dev{zoom:.82}}
+@media (max-width:359px){#experiments .col .dev{zoom:.76}}
+@media (max-width:339px){#experiments .col .dev{zoom:.69}}
 </style>
