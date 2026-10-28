@@ -99,7 +99,7 @@ Do all of these in the same change:
 
 1. **`src/body.html`**
    - Add, remove or rename the `<section class="stop" id="…" data-stop>` with its eyebrow (section name only) and `<h2>`.
-   - Add, remove or rename the matching `<a class="hop" href="#…">` in the top bar, under the right `<span class="grp">` section.
+   - Add, remove or rename the matching `<a class="hop" href="#…">` in the top bar, inside the right phase (`<div class="ph">` → `<div class="pr">`), with an `<i class="ln">` between neighbouring hops. Give it its own icon from `src/sprite.html`; no two slides share one.
    - Fix the `<a class="handoff">` next pill on the slide before it, and on the new slide.
 2. **`public/app.js`**
    - Add or remove the slide module `S['<id>']` if it animates.

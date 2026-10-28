@@ -24,7 +24,7 @@ let lastI=-1;
 function setActive(i){hops.forEach((h,j)=>{h.classList.toggle('on',j===i);h.classList.toggle('done',j<i)});
   if(typeof ride==='function')ride(i);
   mitems.forEach((a,j)=>{a.classList.toggle('on',j===i);a.classList.toggle('done',j<i)});
-  {const hh=hops[i];if(hh&&hh.offsetParent)idxBox.style.setProperty('--px',(hh.offsetLeft+hh.offsetWidth/2)+'px');const tc=$('tcnt');if(tc)tc.textContent=(i+1)+' / '+hops.length;let g=hops[i].previousElementSibling;while(g&&!g.classList.contains('grp'))g=g.previousElementSibling;document.querySelectorAll('#idx .grp').forEach(x=>x.classList.toggle('on',x===g))}
+  {const hh=hops[i];if(hh&&hh.offsetParent)idxBox.style.setProperty('--px',(hh.offsetLeft+hh.offsetWidth/2)+'px');const tc=$('tcnt');if(tc)tc.textContent=(i+1)+' / '+hops.length;const ph=hops[i].closest('.ph');document.querySelectorAll('#idx .ph').forEach(x=>{x.classList.toggle('on',x===ph);x.querySelector('.grp').classList.toggle('on',x===ph)});document.querySelectorAll('#idx .ln,#idx .pl').forEach(l=>{const n=l.nextElementSibling,h=n&&(n.classList.contains('hop')?n:n.querySelector('.hop'));l.classList.toggle('done',hops.indexOf(h)<=i)})}
   $('mcur').innerHTML='<span class="mn">'+(i+1)+' / '+hops.length+'</span><span class="mt"> · '+hops[i].textContent.trim()+'</span>';$('mprog').style.width=((i+1)/hops.length*100)+'%';
 }
 const navObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)setActive(stops.indexOf(e.target))})},{rootMargin:'-45% 0px -50% 0px'});
