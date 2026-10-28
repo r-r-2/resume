@@ -855,4 +855,9 @@ body{position:relative}
 @media (max-width:379px){#experiments .col .dev{zoom:.82}}
 @media (max-width:359px){#experiments .col .dev{zoom:.76}}
 @media (max-width:339px){#experiments .col .dev{zoom:.69}}
+
+/* the request pill never gets cut off; inactive section names give way instead */
+@media (min-width:960px){.idx .rq{flex-shrink:0;max-width:none}.idx-in{flex-shrink:1;min-width:0}}
+@media (min-width:960px) and (max-width:1100px){.idx .rq{max-width:none}}
+@media (min-width:1301px) and (max-width:1600px){.grp:not(.on){font-size:0;padding:0!important;margin:0 5px}.grp:not(.on)::after{content:""}}
 </style>
