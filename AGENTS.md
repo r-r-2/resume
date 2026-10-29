@@ -83,8 +83,8 @@ Build with `python3 build.py`. Preview with `python3 -m http.server 8000 -d publ
 | 6 | `proxy` | Edge | Running infra | Edge (pill shared by Security and Infrastructure) |
 | 7 | `infra` | Infra | Running infra | Infrastructure: Fleet upgrades |
 | 8 | `traffic` | Global traffic | Running infra | Infrastructure: CI/CD |
-| 9 | `oncall` | On-call | Handling outages | Reliability: On-call |
-| 10 | `observability` | Observability | Handling outages | Reliability: Observability |
+| 10 | `oncall` | On-call | Handling outages | Reliability: On-call |
+| 9 | `observability` | Observability | Handling outages | Reliability: Observability |
 | 11 | `resilience` | Resilience | Handling outages | Reliability: Resilience |
 | 12 | `ai` | Building with AI | Building and sharing | Building: Personal projects, AI |
 | 13 | `talks` | Talks | Building and sharing | none, covered by "Also: talks, mentoring and hiring." |

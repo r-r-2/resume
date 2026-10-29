@@ -944,7 +944,7 @@ body{position:relative}
 <i class="pl" aria-hidden="true"></i>
 <div class="ph"><span class="grp">Running infra</span><div class="pr"><a class="hop" href="#proxy"><svg class="ic"><use href="#i-gate"/></svg><span class="lbl">Edge</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#infra"><svg class="ic"><use href="#i-server"/></svg><span class="lbl">Infra</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#traffic"><svg class="ic"><use href="#i-globe"/></svg><span class="lbl">Traffic</span><span class="bar"></span></a></div></div>
 <i class="pl" aria-hidden="true"></i>
-<div class="ph"><span class="grp">Handling outages</span><div class="pr"><a class="hop" href="#oncall"><svg class="ic"><use href="#i-bell"/></svg><span class="lbl">On-call</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#observability"><svg class="ic"><use href="#i-pulse"/></svg><span class="lbl">Observe</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#resilience"><svg class="ic"><use href="#i-bolt"/></svg><span class="lbl">Resilience</span><span class="bar"></span></a></div></div>
+<div class="ph"><span class="grp">Handling outages</span><div class="pr"><a class="hop" href="#observability"><svg class="ic"><use href="#i-pulse"/></svg><span class="lbl">Observe</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#oncall"><svg class="ic"><use href="#i-bell"/></svg><span class="lbl">On-call</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#resilience"><svg class="ic"><use href="#i-bolt"/></svg><span class="lbl">Resilience</span><span class="bar"></span></a></div></div>
 <i class="pl" aria-hidden="true"></i>
 <div class="ph"><span class="grp">Building and sharing</span><div class="pr"><a class="hop" href="#ai"><svg class="ic"><use href="#i-sparkles"/></svg><span class="lbl">Building with AI</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#talks"><svg class="ic"><use href="#i-mic"/></svg><span class="lbl">Talks</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#notes"><svg class="ic"><use href="#i-users"/></svg><span class="lbl">Notes from teammates</span><span class="bar"></span></a><i class="ln" aria-hidden="true"></i><a class="hop" href="#summary"><svg class="ic"><use href="#i-check-circle"/></svg><span class="lbl">Summary</span><span class="bar"></span></a></div></div>
 </div><span class="rq" id="rq" data-tone="me" aria-live="polite"><i></i><span class="rqt"><span class="rid">req 7f3a</span><span class="rst"></span></span></span><span class="tcnt" id="tcnt">1 / 14</span>
@@ -1129,34 +1129,9 @@ body{position:relative}
 </div>
 <div class="part"><div class="ph"><span>What I did</span></div>
 <p>Worked on software serving live traffic from users in nearly every country, and the CI/CD pipelines that deploy it.</p></div>
-<a class="handoff" href="#oncall"><svg class="ic"><use href="#i-down"/></svg>then us-west-1 lit up</a>
+<a class="handoff" href="#observability"><svg class="ic"><use href="#i-down"/></svg>then us-west-1 lit up</a>
 </div></section>
-<!-- 7 · oncall -->
-<section class="stop" id="oncall" data-stop><div class="wrap">
-<p class="eyebrow">Handling outages</p><h2>On-call</h2>
-<div class="scene"><button class="rp" data-replay="oncall" aria-label="Replay" title="Replay"><svg class="ic"><use href="#i-refresh"/></svg></button>
-<div class="hdr"><svg class="ic"><use href="#i-hash"/></svg>incident-push-signin<span class="st" id="ost" style="background:var(--ok-deep);color:var(--ok)">closed</span></div>
-<div id="ochat" tabindex="0" role="log" aria-label="Incident channel messages">
-<div class="m"><div class="av ab"><svg class="ic" style="width:16px;height:16px"><use href="#i-bell"/></svg></div><div><div class="who">Alerts<span>14:02</span></div><div class="alrt">5xx errors rising on POST /v1/push/approve · us-west-1</div></div></div>
-<div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>14:03</span></div><div class="tx">Paging on-call. Who's looking at this?</div></div></div>
-<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>14:07 · on-call</span></div><div class="tx">On it. Errors are coming from push sign-in in us-west-1, right after today's release went out there.</div></div></div>
-<div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>14:08</span></div><div class="tx">What's the user impact?</div></div></div>
-<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>14:09</span></div><div class="tx">About 5,000 users in us-west-1 couldn't approve their sign-ins. Rolling back the release now.</div></div></div>
-<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>14:13</span></div><div class="tx">Rollback done ✅ Error rate is back to normal.</div></div></div>
-<div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>14:14</span></div><div class="tx">Thanks. Marking it mitigated. Can we get the postmortem by tomorrow?</div></div></div>
-<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>14:15</span></div><div class="tx">Yes. I'll include an analysis of the impacted users.</div></div></div>
-<div class="dv">next day</div>
-<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>10:30</span></div><div class="tx">Postmortem shared.</div>
-<div class="pm"><b>Root cause:</b> bad code push on a path with no end-to-end test<br><b>Action items:</b><ul><li>Add the missing case to end-to-end tests</li><li>Analyse the impacted users</li><li>Follow up with them if action is needed</li></ul></div></div></div>
-<div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>10:42</span></div><div class="tx">Looks good. Closing the incident.</div></div></div>
-</div>
-</div>
-<div class="part"><div class="ph"><span>What I did</span></div>
-<p>Took on weekly on-call duties (12x7) and started within the first month of my career. Experienced in prioritizing what actually matters during a production outage. After every outage: RCA, postmortem, and action items for stability.</p>
-<a class="blog" href="https://rr2.dev/posts/tackling-oncall/" target="_blank" rel="noopener"><small><svg class="ic" style="width:13px;height:13px"><use href="#i-file"/></svg>On my blog</small><b>A beginner's guide to tackling oncall responsibilities like a pro</b><span class="sr"> (opens in a new tab)</span></a></div>
-<a class="handoff" href="#observability"><svg class="ic"><use href="#i-down"/></svg>how the alert found me</a>
-</div></section>
-<!-- 8 · observability -->
+<!-- 7 · observability -->
 <section class="stop" id="observability" data-stop><div class="wrap">
 <p class="eyebrow">Handling outages</p><h2>Observability</h2>
 <div class="scene">
@@ -1184,6 +1159,31 @@ body{position:relative}
 </div>
 <div class="part"><div class="ph"><span>What I did</span></div>
 <p>Built and operated monitoring and alerting across cloud and on-prem, including Splunk clusters and dashboards, covering system, app, and external user-probe metrics.</p></div>
+<a class="handoff" href="#oncall"><svg class="ic"><use href="#i-down"/></svg>and the pager went off</a>
+</div></section>
+<!-- 8 · oncall -->
+<section class="stop" id="oncall" data-stop><div class="wrap">
+<p class="eyebrow">Handling outages</p><h2>On-call</h2>
+<div class="scene"><button class="rp" data-replay="oncall" aria-label="Replay" title="Replay"><svg class="ic"><use href="#i-refresh"/></svg></button>
+<div class="hdr"><svg class="ic"><use href="#i-hash"/></svg>incident-push-signin<span class="st" id="ost" style="background:var(--ok-deep);color:var(--ok)">closed</span></div>
+<div id="ochat" tabindex="0" role="log" aria-label="Incident channel messages">
+<div class="m"><div class="av ab"><svg class="ic" style="width:16px;height:16px"><use href="#i-bell"/></svg></div><div><div class="who">Alerts<span>14:02</span></div><div class="alrt">5xx errors rising on POST /v1/push/approve · us-west-1</div></div></div>
+<div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>14:03</span></div><div class="tx">Paging on-call. Who's looking at this?</div></div></div>
+<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>14:07 · on-call</span></div><div class="tx">On it. Errors are coming from push sign-in in us-west-1, right after today's release went out there.</div></div></div>
+<div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>14:08</span></div><div class="tx">What's the user impact?</div></div></div>
+<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>14:09</span></div><div class="tx">About 5,000 users in us-west-1 couldn't approve their sign-ins. Rolling back the release now.</div></div></div>
+<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>14:13</span></div><div class="tx">Rollback done ✅ Error rate is back to normal.</div></div></div>
+<div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>14:14</span></div><div class="tx">Thanks. Marking it mitigated. Can we get the postmortem by tomorrow?</div></div></div>
+<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>14:15</span></div><div class="tx">Yes. I'll include an analysis of the impacted users.</div></div></div>
+<div class="dv">next day</div>
+<div class="m"><div class="av"><img src="rahul.webp" alt="Rahul" width="34" height="34"></div><div><div class="who">Rahul<span>10:30</span></div><div class="tx">Postmortem shared.</div>
+<div class="pm"><b>Root cause:</b> bad code push on a path with no end-to-end test<br><b>Action items:</b><ul><li>Add the missing case to end-to-end tests</li><li>Analyse the impacted users</li><li>Follow up with them if action is needed</li></ul></div></div></div>
+<div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>10:42</span></div><div class="tx">Looks good. Closing the incident.</div></div></div>
+</div>
+</div>
+<div class="part"><div class="ph"><span>What I did</span></div>
+<p>Took on weekly on-call duties (12x7) and started within the first month of my career. Experienced in prioritizing what actually matters during a production outage. After every outage: RCA, postmortem, and action items for stability.</p>
+<a class="blog" href="https://rr2.dev/posts/tackling-oncall/" target="_blank" rel="noopener"><small><svg class="ic" style="width:13px;height:13px"><use href="#i-file"/></svg>On my blog</small><b>A beginner's guide to tackling oncall responsibilities like a pro</b><span class="sr"> (opens in a new tab)</span></a></div>
 <a class="handoff" href="#resilience"><svg class="ic"><use href="#i-down"/></svg>breaking things on purpose</a>
 </div></section>
 <!-- 9 · resilience -->
