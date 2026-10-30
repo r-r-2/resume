@@ -358,7 +358,8 @@ $('sigo').addEventListener('click',()=>{const b=$('sigo');b.innerHTML='<span cla
   function setPill(t,tone){if(t!==lastT){const m=t.slice(ME.length),sep=m.startsWith(' → ')?' → ':m.startsWith(' · ')?' · ':'',st=m.slice(sep.length);pills.forEach(p=>{p.querySelector('.rqt').innerHTML='<span class="rid">'+ME+sep+'</span><span class="rst">'+st+'</span>';p.classList.remove('chg');void p.offsetWidth;p.classList.add('chg')});lastT=t}
     if((tone||'me')!==lastTone){pills.forEach(p=>p.dataset.tone=tone||'me');lastTone=tone||'me'}}
   function off(){hl.classList.remove('on');mr.classList.remove('on')}
-  function frame(){const nh=navh();let i=0;for(let k=0;k<stops.length;k++){if(stops[k].getBoundingClientRect().top-nh<=innerHeight*.45)i=k}
+  let lastScroll=performance.now(),lastRun=0;addEventListener('scroll',()=>{lastScroll=performance.now()},{passive:true});addEventListener('resize',()=>{lastScroll=performance.now()});
+  function frame(){const t0=performance.now();if(t0-lastScroll>1500&&t0-lastRun<250){requestAnimationFrame(frame);return}lastRun=t0;const nh=navh();let i=0;for(let k=0;k<stops.length;k++){if(stops[k].getBoundingClientRect().top-nh<=innerHeight*.45)i=k}
     const id=stops[i].id,a=A[id]?A[id]():DONE;setPill(a.t,a.tone);
     const top=stops[i].getBoundingClientRect().top-nh,settled=Math.abs(top)<4,now=performance.now();
     if(i!==cur||!settled){cur=i;still=now;if(!settled&&shown!==-1){shown=-1;off()}}

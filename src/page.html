@@ -848,7 +848,7 @@ body{position:relative}
   .idx>.brand{height:30px}
   .idx-in{flex:1 1 auto;min-width:0;display:flex;align-items:center;max-width:900px;margin:0 auto}
   .ph{position:relative;display:flex;flex:none}
-  .grp{position:absolute;left:50%;bottom:calc(100% + 5px);transform:translateX(-50%);font:600 10.5px/12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);white-space:nowrap;padding:0;margin:0;transition:color .25s}
+  .grp{position:absolute;left:50%;bottom:calc(100% + 5px);transform:translateX(-50%);font:600 13px/14px var(--sans);letter-spacing:0;color:var(--text-3);white-space:nowrap;padding:0;margin:0;transition:color .25s}
   .grp.on{color:var(--maroon)}
   .pr{display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:15px;padding:2px;transition:border-color .25s,box-shadow .25s}
   .ph.on .pr{border-color:#E3B9C6;box-shadow:0 1px 6px rgba(154,37,71,.10)}
@@ -860,7 +860,10 @@ body{position:relative}
   .hop.on{background:var(--maroon);color:#fff;padding:0 10px 0 8px}
   .hop .lbl{position:absolute;top:30px;left:50%;transform:translate(-50%,-4px);opacity:0;pointer-events:none;background:var(--text);color:#fff;font:500 12px var(--sans);padding:4px 9px;border-radius:6px;white-space:nowrap;transition:opacity .15s,transform .15s;z-index:5}
   .hop:not(.on):hover .lbl,.hop:not(.on):focus-visible .lbl{opacity:1;transform:translate(-50%,0)}
-  .hop.on .lbl{position:static;opacity:1;transform:none;background:none;padding:0;font:600 12.5px var(--sans);color:#fff}
+  .hop.on .lbl{opacity:0!important;transition:none}
+  .hop{gap:0;transition:background .35s ease,color .35s ease,padding .35s ease}
+  .hop::after{content:attr(data-n);display:block;max-width:0;opacity:0;overflow:hidden;white-space:nowrap;font:600 12.5px/24px var(--sans);color:#fff;margin-left:0;transition:max-width .38s ease,opacity .25s ease,margin-left .38s ease}
+  .hop.on::after{max-width:220px;opacity:1;margin-left:6px;transition:max-width .38s ease,opacity .3s ease .08s,margin-left .38s ease}
   .ln{display:block;flex:none;width:6px;height:2px;border-radius:1px;background:var(--line);transition:background .25s}
   .ln.done{background:#D9A5B5}
   .pl{display:block;flex:1 1 0;min-width:28px;height:2px;border-radius:1px;background:var(--line-2);transition:background .35s}
@@ -869,7 +872,7 @@ body{position:relative}
   .idx>.tcnt{height:26px;display:flex;align-items:center;min-width:0;padding:0 10px;margin-left:-24px;border-radius:0 13px 13px 0;background:#fff;border:1px solid var(--line);border-left:none;color:var(--text-2);flex:none}
 }
 @media (min-width:960px) and (max-width:1300px){.ph:not(.on) .grp{visibility:hidden}.pl{min-width:14px}}
-@media (min-width:960px) and (max-width:1100px){.idx{gap:14px}.pl{min-width:8px}.idx .rq .rid{display:none}.hop.on{padding:0 8px}.hop.on .lbl{position:absolute;opacity:0;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
+@media (min-width:960px) and (max-width:1100px){.idx{gap:14px}.pl{min-width:8px}.idx .rq .rid{display:none}.hop.on{padding:0 8px}.hop.on::after{max-width:0;opacity:0;margin-left:0}}
 /* phones: just the count and the full request status */
 @media (max-width:959px){#mcur .mt{display:none}.rqm{max-width:calc(100vw - 140px)}}
 </style>
