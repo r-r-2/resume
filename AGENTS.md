@@ -37,7 +37,7 @@ This repo and the site are public. Before writing or committing anything, check 
 **Never include:**
 - **Employer details:** the company's name, products, internal tools and systems, team names, project codenames, office or data-centre names, and internal URLs or hostnames. Describe work generically ("our monitoring", "the abuse protection plugin", "account recovery").
 - **People:** colleagues', managers' or reviewers' names, usernames or handles. Testimonials are attributed by role only.
-- **Real work data:** user counts other than the agreed "millions of daily users" and "about 5,000 users" in the scripted incident; real conversion rates, metrics or percentages; real dates of incidents; real IP addresses, hostnames or regions beyond the agreed `us-west-1` and `*.example.com`.
+- **Real work data:** user counts other than the agreed "millions of users" (Auth), "used daily by millions of people across the globe" (Global traffic) and "about 5,000 users" in the scripted incident; real conversion rates, metrics or percentages; real dates of incidents; real IP addresses, hostnames or regions beyond the agreed `us-west-1` and `*.example.com`.
 - **Security details:** how a vulnerability worked, audit report contents, exploit steps, or anything that would help an attacker. Say "closed audit findings on account takeover", never how.
 - **Secrets:** API keys, tokens, passwords, private keys, `.env` files, analytics or Cloudflare credentials. Only the public GA measurement ID (`G-811TD0J532`) belongs in the code.
 - **Personal data:** phone numbers, home address, personal emails, IDs. The only contact address is `rahul@rr2.dev`.

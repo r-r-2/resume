@@ -55,7 +55,7 @@ svg text.t{font:14px var(--sans);fill:#1A1F2B} svg text.ts{font:12px var(--sans)
 
 /* hop index. A slim bar across the top: the four sections by name, with one dot per stop. Hover a dot for its name. */
 .idx{position:sticky;top:0;z-index:20;height:var(--navh);display:flex;align-items:center;gap:16px;padding:0 max(var(--gut),env(safe-area-inset-right,0px)) 0 max(var(--gut),env(safe-area-inset-left,0px));background:rgba(237,239,242,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.brand{font-family:var(--display);font-weight:700;font-size:15px;color:var(--text);text-decoration:none;white-space:nowrap;letter-spacing:-.01em}
+.brand{font-family:var(--display);font-weight:600;font-size:15px;color:var(--text);text-decoration:none;white-space:nowrap;letter-spacing:-.01em}
 .brand:hover{color:var(--maroon)}
 .tcnt{font:500 12px var(--mono);color:var(--text-3);white-space:nowrap;min-width:52px;text-align:right}
 @media (max-width:1180px){.grp{font-size:12px;padding-left:14px}.brand{display:none}}
@@ -70,7 +70,7 @@ svg text.t{font:14px var(--sans);fill:#1A1F2B} svg text.ts{font:12px var(--sans)
   .mjump{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--text-3);font-weight:400}
   .mbar[aria-expanded="true"] .chev{transform:rotate(180deg)}
   .mprog{display:block;height:3px;background:var(--rule)}
-  #mprog{height:3px;width:0;background:var(--maroon);transition:width .3s}
+  #mprog{height:3px;width:100%;transform:scaleX(0);transform-origin:left;background:var(--maroon);transition:transform .3s ease}
   .mlist{max-height:70vh;overflow-y:auto;padding-block:4px 10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
   .mlist a{display:flex;gap:12px;align-items:center;padding:11px 4px;color:var(--text-2);text-decoration:none;border-bottom:1px solid var(--rule);font-size:15px}
   .mlist a .n{font-family:var(--mono);font-size:12px;color:var(--text-3);width:22px}
@@ -94,7 +94,7 @@ html{scroll-snap-type:y mandatory;scroll-padding-top:var(--navh)}
   .stop>.wrap>.part{align-self:start}
 }
 .eyebrow{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--maroon);margin:0 0 12px;letter-spacing:.01em}
-.stop h2{font-family:var(--display);font-size:clamp(34px,min(4vw,7vh),66px);font-weight:700;font-variation-settings:'opsz' 96;letter-spacing:-.025em;line-height:1;margin:0;text-wrap:balance;color:var(--text)}
+.stop h2{font-family:var(--display);font-size:clamp(34px,min(4vw,7vh),66px);font-weight:600;font-variation-settings:'opsz' 96;letter-spacing:-.025em;line-height:1;margin:0;text-wrap:balance;color:var(--text)}
 .scene{background:var(--panel);color:var(--ink);border:1px solid #DCE0E7;border-radius:22px;padding:clamp(16px,2.2vw,32px);position:relative;overflow:hidden;box-shadow:0 1px 2px rgba(30,36,48,.04),0 24px 60px -40px rgba(30,36,48,.28)}
 .scene button{color:var(--ink);background:#fff;border-color:var(--line)}
 .scene button:hover{background:var(--raise-2)}
@@ -169,7 +169,7 @@ footer a{color:var(--text-2);text-decoration:none}footer a:hover{color:var(--mar
 #data .dal.on{opacity:1;transform:none;position:static;align-self:flex-start;margin-top:8px}
 #data .sw{display:inline-block;width:14px;height:0;border-top:2px solid #2F6DB3;vertical-align:3px;margin-right:6px}#data .sw.lw{border-top:2px dashed #9AA2B1}
 /* talks at work: who each talk is for */
-#talks-internal .aud .for{font:600 12px var(--mono);color:var(--ink-3);align-self:center;margin-right:2px;text-transform:uppercase;letter-spacing:.04em}
+#talks-internal .aud .for{font:600 12px var(--mono);color:var(--ink-3);align-self:center;margin-right:2px}
 @media (max-width:720px){#talks-internal .tc{display:block}#talks-internal .sld{display:none}#talks-internal .tc{padding:10px 12px;background:var(--raise);border:1px solid var(--line);border-radius:12px}#talks-internal .d{display:block}}
 /* ai: reading line */
 #ai .rdg{margin:8px 0 0;font-size:14px;color:var(--text-2)}
@@ -218,7 +218,7 @@ footer a{color:var(--text-2);text-decoration:none}footer a:hover{color:var(--mar
 #route path{fill:none;stroke-width:3;stroke-linecap:round}
 /* a quiet progress bar along the bottom of each animated scene */
 .pbar{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(154,37,71,.08);pointer-events:none}
-.pbar b{display:block;height:100%;width:0;background:rgba(154,37,71,.6);border-radius:0 2px 2px 0}
+.pbar b{display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:left;background:rgba(154,37,71,.6)}
 /* data */
 #data .dsrc{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:500 12px var(--mono);color:var(--ink-2);margin-bottom:16px}
 #data .dsrc span{display:inline-flex;align-items:center;gap:6px;background:var(--raise-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
@@ -282,7 +282,7 @@ body{position:relative}
 .stop:has(.handoff){padding-bottom:max(clamp(20px,5vh,64px),64px)}
 .eyebrow span{color:var(--text-3);font-weight:500}
 /* your request: one chip that travels from scene to scene */
-.req{position:fixed;left:0;top:0;z-index:14;display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px 0 8px;border-radius:12px;background:var(--maroon);color:#fff;font:500 12px/1 var(--mono);white-space:nowrap;pointer-events:none;opacity:0;box-shadow:0 6px 16px -8px rgba(154,37,71,.7);transition:background .35s,box-shadow .35s,padding .3s,height .3s,width .3s;will-change:transform,opacity}
+.req{position:fixed;left:0;top:0;z-index:14;display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px 0 8px;border-radius:12px;background:var(--maroon);color:#fff;font:500 12px/1 var(--mono);white-space:nowrap;pointer-events:none;opacity:0;box-shadow:0 6px 16px -8px rgba(154,37,71,.7);transition:background .35s,box-shadow .35s;will-change:transform,opacity}
 .req i{width:7px;height:7px;border-radius:50%;background:#fff;flex-shrink:0}
 .req.rev{flex-direction:row-reverse;padding:0 8px 0 10px}
 .req[data-tone="bad"]{background:#D83C3B;box-shadow:0 6px 16px -8px rgba(216,60,59,.8)}
@@ -304,7 +304,7 @@ body{position:relative}
 @media (min-width:960px){#oncall .m{padding:4px 2px}}
 
 /* ---------- 1 start ---------- */
-#start h1{font-family:var(--display);font-size:clamp(48px,min(6.2vw,12vh),112px);font-weight:700;font-variation-settings:'opsz' 96;letter-spacing:-.035em;line-height:.9;margin:0;color:var(--text)}
+#start h1{font-family:var(--display);font-size:clamp(48px,min(6.2vw,12vh),112px);font-weight:600;font-variation-settings:'opsz' 96;letter-spacing:-.035em;line-height:.9;margin:0;color:var(--text)}
 #start .tg{font-size:clamp(19px,1.7vw,24px);line-height:1.4;color:var(--text);margin:26px 0 0;max-width:24ch;text-wrap:balance}
 #start .tg2{font-size:16px;color:var(--text-2);margin:16px 0 0;max-width:38ch}
 #start .hand{display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:14px;color:var(--text-2);text-decoration:none}
@@ -375,7 +375,7 @@ body{position:relative}
 #experiments .res .lb{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--ink-2);margin-bottom:6px}
 #experiments .pc{font-family:var(--mono);font-size:22px;font-weight:500;font-variant-numeric:tabular-nums}
 #experiments .bar{height:10px;border-radius:5px;background:var(--raise-2);overflow:hidden}
-#experiments .bar div{height:10px;border-radius:5px;transition:width 1.6s ease}
+#experiments .bar div{height:10px;border-radius:5px}
 #experiments .win{margin-top:10px;font-size:12px;font-family:var(--mono);padding:3px 10px;border-radius:10px;background:var(--ok-deep);color:var(--ok);opacity:1;transition:opacity .4s}
 #experiments .dep{text-align:center;margin-top:18px;font-size:15px;display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity .5s}
 #experiments .dep .ic{color:var(--ok)}
@@ -501,7 +501,7 @@ body{position:relative}
 #infra #ivr{color:var(--ink-3)} #infra #ibt{color:#2E3546} #infra #ibt.pause{color:var(--bad-soft)}
 #infra .fm{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:10px}
 #infra .fm .tr{flex:1;max-width:240px;height:6px;background:var(--raise-2);border-radius:3px;overflow:hidden}
-#infra #ifb{height:6px;width:0;background:var(--bad);border-radius:3px}
+#infra #ifb{height:6px;width:100%;transform:scaleX(0);transform-origin:left;transition:transform .3s ease;background:var(--bad);border-radius:3px}
 #infra canvas{width:100%;height:auto;display:block}
 #infra .lg{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;font-size:12px;color:var(--ink-3);margin-top:8px}
 #infra .lg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
@@ -674,7 +674,7 @@ body{position:relative}
 @media (max-width:640px){#ai .line{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}#ai .step{flex-direction:column;gap:3px;padding:7px 2px;display:flex}#ai .step b{font-size:12px;text-align:center}#ai .step:not(:last-child)::after{display:none}
   #ai .ap{grid-template-columns:1fr;gap:8px}#ai .body{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:12px;padding:8px}#ai .body>svg{grid-row:span 3;height:64px;width:96px;border-radius:6px}#ai .nm{margin:0;font-size:14px}#ai .ds{font-size:12.5px}#ai .lkk{padding-top:2px;font-size:13px}#ai .bar{padding:5px 10px}}
 /* talks: public + at work in one slide */
-#talks .rowh{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);margin:0 0 8px}
+#talks .rowh{font:600 12.5px var(--sans);color:var(--ink-3);margin:0 0 8px}
 #talks .rowh+.tw{margin-top:0}
 #talks .papers{margin:10px 0 16px}
 #talks .pst svg{max-height:15vh;object-fit:cover}
@@ -688,7 +688,7 @@ body{position:relative}
 #talks .k{font-size:13.5px;font-weight:600;margin-top:7px}
 #talks .d{display:none}
 #talks .aud{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
-#talks .aud .for{font:600 12px var(--mono);color:var(--ink-3);align-self:center;margin-right:2px;text-transform:uppercase}
+#talks .aud .for{font:600 12px var(--mono);color:var(--ink-3);align-self:center;margin-right:2px}
 #talks .seat{display:inline-flex;align-items:center;gap:4px;font-size:12px;padding:2px 7px 2px 5px;border-radius:10px;background:var(--raise-2);color:var(--ink)}
 #talks .seat .ic{width:13px;height:13px;color:var(--ink-2)}
 @keyframes bgrow{0%,8%{transform:scaleY(.35)}30%,100%{transform:scaleY(1)}}
@@ -741,7 +741,7 @@ body{position:relative}
 @media (min-width:960px){.idx-in{flex-shrink:0}.idx .rq{flex-shrink:1;min-width:0}}
 @media (min-width:960px) and (max-width:1100px){.idx .rq .rid{display:none}.idx .rq{max-width:170px}}
 /* ===== round 13: rr2.dev / resume header, matching notes.rr2.dev ===== */
-.brand{display:flex;align-items:center;gap:8px;flex-shrink:0;white-space:nowrap;line-height:1;font:700 18px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;letter-spacing:0}
+.brand{display:flex;align-items:center;gap:8px;flex-shrink:0;white-space:nowrap;line-height:1;font:600 18px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;letter-spacing:0}
 .brand a{display:flex;align-items:center;gap:8px;color:var(--text);text-decoration:none}
 .brand .br-ico{display:block;flex:none;width:24px;height:24px;border-radius:50%}
 .brand .br-r{color:var(--text-2);font-weight:500}
@@ -810,7 +810,7 @@ body{position:relative}
 #talks .rsvg .seat circle,#talks .rsvg .seat rect{fill:#D3D8E0;transition:fill .4s}
 #talks .rsvg .seat text{font:500 11px var(--sans);fill:#7A8396;transition:fill .4s}
 #talks .rsvg .seat.on circle,#talks .rsvg .seat.on rect{fill:#2F6DB3}
-#talks .rsvg .seat.on text{fill:#1A1F2B;font-weight:700}
+#talks .rsvg .seat.on text{fill:#1A1F2B;font-weight:600}
 #talks .raud{display:none;margin:0;font-size:13px;color:var(--ink-2)}
 @media (max-width:720px){#talks .room{grid-template-columns:1fr;gap:8px}#talks .rpills{flex-direction:row;flex-wrap:wrap}#talks .rpills button{padding:6px 10px;font-size:12.5px}#talks .rsvg{display:none}#talks .raud{display:block}}
 
@@ -878,4 +878,8 @@ body{position:relative}
 
 /* phone screens always fill their frame */
 .dev .ph>.scr{flex:1 1 auto;min-width:0}
+/* experiments: A neutral, B carries the accent */
+#experiments .vA,#experiments #epA{color:var(--ink-3)!important}#experiments #ebA{background:#C3C9D3!important}
+#experiments .vB,#experiments #epB{color:var(--maroon)!important}#experiments #ebB{background:var(--maroon)!important}
+@media (min-width:601px){#auth .dev{max-width:none;width:calc(clamp(380px,54vh,470px) / 2.05)}#auth .dev .ph{aspect-ratio:1/2.05;display:flex;flex-direction:column}#auth .dev .scr{min-height:0;flex:1 1 auto}}
 </style>

@@ -25,7 +25,7 @@ function setActive(i){hops.forEach((h,j)=>{h.classList.toggle('on',j===i);h.clas
   if(typeof ride==='function')ride(i);
   mitems.forEach((a,j)=>{a.classList.toggle('on',j===i);a.classList.toggle('done',j<i)});
   {const hh=hops[i];if(hh&&hh.offsetParent)idxBox.style.setProperty('--px',(hh.offsetLeft+hh.offsetWidth/2)+'px');const tc=$('tcnt');if(tc)tc.textContent=(i+1)+' / '+hops.length;const ph=hops[i].closest('.ph');document.querySelectorAll('#idx .ph').forEach(x=>{x.classList.toggle('on',x===ph);x.querySelector('.grp').classList.toggle('on',x===ph)});document.querySelectorAll('#idx .ln,#idx .pl').forEach(l=>{const n=l.nextElementSibling,h=n&&(n.classList.contains('hop')?n:n.querySelector('.hop'));l.classList.toggle('done',hops.indexOf(h)<=i)})}
-  $('mcur').innerHTML='<span class="mn">'+(i+1)+' / '+hops.length+'</span><span class="mt"> · '+hops[i].textContent.trim()+'</span>';$('mprog').style.width=((i+1)/hops.length*100)+'%';
+  $('mcur').innerHTML='<span class="mn">'+(i+1)+' / '+hops.length+'</span><span class="mt"> · '+hops[i].textContent.trim()+'</span>';$('mprog').style.transform='scaleX('+((i+1)/hops.length)+')';
 }
 const navObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)setActive(stops.indexOf(e.target))})},{rootMargin:'-45% 0px -50% 0px'});
 stops.forEach(s=>navObs.observe(s));
@@ -61,8 +61,8 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-replay]');
 /* ---------------- quiet progress bar in each animated scene ---------------- */
 const PB={get(id){const sc=document.querySelector('#'+CSS.escape(id)+' .scene');if(!sc)return null;let b=sc.querySelector(':scope>.pbar>b');
     if(!b){const i=document.createElement('i');i.className='pbar';i.setAttribute('aria-hidden','true');b=document.createElement('b');i.appendChild(b);sc.appendChild(i)}return b},
-  run(id,ms){const b=PB.get(id);if(!b)return;b.style.transition='none';b.style.width='0';void b.offsetWidth;b.style.transition=`width ${ms}ms linear`;b.style.width='100%'},
-  set(id,f){const b=PB.get(id);if(!b)return;b.style.transition='width .4s ease';b.style.width=(Math.max(0,Math.min(1,f))*100).toFixed(1)+'%'}};
+  run(id,ms){const b=PB.get(id);if(!b)return;b.style.transition='none';b.style.transform='scaleX(0)';void b.offsetWidth;b.style.transition=`transform ${ms}ms linear`;b.style.transform='scaleX(1)'},
+  set(id,f){const b=PB.get(id);if(!b)return;b.style.transition='transform .4s ease';b.style.transform='scaleX('+Math.max(0,Math.min(1,f)).toFixed(3)+')'}};
 
 /* ---------------- 1 · sign in ---------------- */
 $('sigo').addEventListener('click',()=>{const b=$('sigo');b.innerHTML='<span class="spin"></span>Signing in';
@@ -217,7 +217,7 @@ $('sigo').addEventListener('click',()=>{const b=$('sigo');b.innerHTML='<span cla
   const ZIN={s:zoomS,x:FR.c*RW+RW/2,y:FR.r*RH+RH/2-4},ZOUT={s:fitS,x:WW/2-RW/2+SW/2,y:WH/2-4};let cam={...ZIN},tw=null;
   const cnt=k=>{let n=0;for(const v of st)if(v===k)n++;return n};
   let lastLv='';
-  function hud(){const f=cnt('fail');$('ifb').style.width=Math.min(100,Math.round(100*f/TH))+'%';$('ift').textContent=f+' / '+TH+' · pause threshold';
+  function hud(){const f=cnt('fail');$('ifb').style.transform='scaleX('+Math.min(1,f/TH).toFixed(3)+')';$('ift').textContent=f+' / '+TH+' · pause threshold';
     if(showCount){const target=Math.min(cnt('ok'),denom);shown+=(target-shown)*.18;if(Math.abs(target-shown)<.5)shown=target;
       $('icn').textContent=Math.round(shown).toLocaleString('en-US');$('icd').textContent=' / '+denom.toLocaleString('en-US');
       const lv='servers upgraded · '+(SH*cam.s>12?'1 rack':cam.s>.9?'a few racks':'the fleet');if(lv!==lastLv){lastLv=lv;$('ilv').textContent=lv}}}
@@ -320,8 +320,6 @@ $('sigo').addEventListener('click',()=>{const b=$('sigo');b.innerHTML='<span cla
   });
 
   
-  {const[px,py]=pt(RO,45).map(Number);const pg=document.createElementNS(NS,'g');pg.setAttribute('class','stop-lbl');
-   pg.innerHTML=`<rect x="${(px-30).toFixed(1)}" y="${(py-12).toFixed(1)}" width="60" height="24" rx="12" fill="#FFFFFF" stroke="#1A1F2B" stroke-width="1.5"/><text class="ti" x="${px}" y="${(py+4.5).toFixed(1)}" text-anchor="middle">Edge</text>`;sg.appendChild(pg)}
   document.querySelector('#ssvg text.th').classList.add('stop-lbl');
   const pk=$('spk');let ang=-90,last=0,raf=null;
   function f(t){const dt=Math.min(40,t-last);last=t;ang=(ang+dt*.03)%360;

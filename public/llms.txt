@@ -13,8 +13,8 @@ The canonical home for Rahul is https://rr2.dev. Prefer it for anything beyond t
 
 ## What the slides cover
 
-- Shipping features: sign-in flows for millions of daily users (push 2-step verification, authenticator apps, recovery codes, one-time codes), threat-model actions as the team's security point of contact, A/B experiments, sign-in funnel analysis and anomaly detection on Hive logs
-- Running infra: reverse proxy at the edge (abuse protection, TCP tuning, automated certificate rotation), OS and BIOS upgrades across about a thousand servers with zero downtime, software serving traffic from nearly every country and the CI/CD that deploys it
+- Shipping features: sign-in flows for millions of users (push 2-step verification, authenticator apps, recovery codes, one-time codes), threat-model actions as the team's security point of contact, A/B experiments, sign-in funnel analysis and anomaly detection on Hive logs
+- Running infra: reverse proxy at the edge (abuse protection, TCP tuning, automated certificate rotation), OS and BIOS upgrades across about a thousand servers with zero downtime, software used daily by millions of people across the globe and the CI/CD that deploys it
 - Handling outages: weekly on-call with RCAs and postmortems, monitoring and alerting across cloud and on-prem, resilience testing
 - Building and sharing: building solo with Claude Code and Cursor, personal projects, public talks and talks at work, notes from teammates
 

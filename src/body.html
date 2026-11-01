@@ -53,8 +53,8 @@
 <div class="side feats"><div class="ft"><svg class="ic"><use href="#i-phone"/></svg>Authenticator apps</div><div class="ft"><svg class="ic"><use href="#i-file"/></svg>Recovery codes</div><div class="ft"><svg class="ic"><use href="#i-mail"/></svg>One-time codes via Messenger</div><div class="ft"><svg class="ic"><use href="#i-code"/></svg>OAuth dynamic client registration</div></div>
 </div>
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
-<p>Owned push 2-step verification end to end. Built sign-in flows for millions of daily users, from authenticator apps and recovery codes to one-time codes.</p></div>
+<div class="part">
+<p>Owned push 2-step verification end to end. Built sign-in flows for millions of users, from authenticator apps and recovery codes to one-time codes.</p></div>
 <a class="handoff" href="#security"><svg class="ic"><use href="#i-down"/></svg>is it safe?</a>
 </div></section>
 <!-- security -->
@@ -78,7 +78,7 @@
 </svg>
 <div class="sec-l"><div><b>Direct host access</b><span>via bastion only</span></div><div><b>Weak crypto</b><span>strong ciphers only</span></div><div><b>Account takeover</b><span>audit findings closed</span></div></div>
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Drove threat-model action items as my team's security point of contact: bastion hosts, removing weak crypto, and closing audit findings.</p></div>
 <a class="handoff" href="#experiments"><svg class="ic"><use href="#i-down"/></svg>which screen did you see?</a>
 </div></section>
@@ -88,14 +88,14 @@
 <div class="scene">
 <div class="top"><span><b>50%</b> of users see A</span><span style="color:var(--line-2)">·</span><span><b>50%</b> see B</span></div>
 <div class="cols">
-<div class="col"><div class="vl" style="color:var(--accent-soft)">variant A</div>
+<div class="col"><div class="vl vA">variant A</div>
 <div class="dev"><span class="btn" style="left:-4px;top:80px;height:28px"></span><span class="btn" style="right:-4px;top:100px;height:44px"></span>
 <div class="ph"><div class="scr"><div class="sb"><span>9:41</span><span class="isl"></span><span><svg class="ic"><use href="#i-signal"/></svg></span></div>
 <div class="card"><div class="shd"><svg class="ic"><use href="#i-shield-check"/></svg></div><div class="q">Is this still your phone number?</div><div class="num">+1 ••• ••• 0142</div><div class="b1">Confirm</div><div class="b2">Update</div><div class="b3">Remind me later</div></div><div class="hb"></div></div></div></div>
 <div class="res"><div class="lb"><span>conversion</span><span class="pc" id="epA" style="color:var(--accent-soft)">20%</span></div><div class="bar"><div id="ebA" style="background:#D4537E;width:20%"></div></div></div>
 <div class="win" aria-hidden="true" style="visibility:hidden">winner</div>
 </div>
-<div class="col"><div class="vl" style="color:#2F6DB3">variant B</div>
+<div class="col"><div class="vl vB">variant B</div>
 <div class="dev"><span class="btn" style="left:-4px;top:80px;height:28px"></span><span class="btn" style="right:-4px;top:100px;height:44px"></span>
 <div class="ph" id="ephB" style="border-color:var(--ok)"><div class="scr"><div class="sb"><span>9:41</span><span class="isl"></span><span><svg class="ic"><use href="#i-signal"/></svg></span></div>
 <div class="card"><div class="shd"><svg class="ic"><use href="#i-shield-check"/></svg></div><div class="q">Let's secure your account. Confirm if your phone number is up to date.</div><div class="num">+1 ••• ••• 0142</div><div class="b1">Confirm</div><div class="b2">Update</div><div class="b3">Remind me later</div></div><div class="hb"></div></div></div></div>
@@ -105,7 +105,7 @@
 </div>
 <div class="dep" id="edep"><svg class="ic"><use href="#i-rocket"/></svg>Variant B deployed to everyone</div>
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Ran experiments to figure out which flow converts better, and deployed the winner.</p></div>
 <a class="handoff" href="#data"><svg class="ic"><use href="#i-down"/></svg>what the data said</a>
 </div></section>
@@ -115,7 +115,7 @@
 <div class="scene">
 <div class="dgrid">
 <div class="dp" id="dfun"><div class="dh">User behaviour analysis<span class="tags"><i>Hive</i><i>HDFS</i><i>Looker</i></span></div>
-<div class="fbar"><span>Last 30 days</span><span>Platform: All</span></div>
+
 <div class="tiles">
 <div class="tile"><div class="tt">Sign-in funnel</div>
 <div class="fr"><b style="width:100%"></b><span>All sign-ins</span></div>
@@ -135,7 +135,7 @@
 </div>
 </div>
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Analysed sign-in and 2FA funnels, and built anomaly detection on Hive logs with period-over-period alerts on hourly event data.</p></div>
 <a class="handoff" href="#proxy"><svg class="ic"><use href="#i-down"/></svg>now through the edge</a>
 </div></section>
@@ -153,9 +153,9 @@
 <path d="M326 120h28M326 150h28M326 180h28" stroke="#16946C" stroke-width="3" stroke-linecap="round"/>
 </svg>
 <div class="gw">Apache Traffic Server</div>
-<div class="caps"><span><svg class="ic" style="color:var(--bad-soft)"><use href="#i-shield-x"/></svg>Bots get HTTP 429</span><span><svg class="ic" style="color:var(--ok)"><use href="#i-cert"/></svg>Certificates rotate themselves</span><span><svg class="ic"><use href="#i-tune"/></svg>TCP tuned</span></div>
+
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Ran the reverse proxy servers. Configured the abuse protection plugin on Apache Traffic Server, tuned TCP settings, and automated certificate rotation.</p></div>
 <a class="handoff" href="#infra"><svg class="ic"><use href="#i-down"/></svg>lands on a server</a>
 </div></section>
@@ -171,9 +171,9 @@
 <div class="fm"><span>failed</span><div class="tr"><div id="ifb"></div></div><span id="ift">0 / 15 · pause threshold</span></div>
 <canvas id="icv" width="648" height="300" aria-label="Server fleet, zooming from one rack to about a thousand servers"></canvas>
 <div class="lg"><span><i style="background:#C3CAD5"></i>old version</span><span><i style="background:#C9790F"></i>draining</span><span><i style="background:#9AA2B1"></i>rebooting</span><span><i style="background:#16946C"></i>upgraded</span><span><i style="background:#E24B4A"></i>failed</span></div>
-<div class="caps"><span><svg class="ic"><use href="#i-repeat"/></svg>Routine upgrades across a thousand servers</span><span><svg class="ic"><use href="#i-pause"/></svg>Pauses when failures pile up</span><span><svg class="ic"><use href="#i-code"/></svg>Chef and Ansible</span></div>
+
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Routinely performed OS and BIOS upgrades across about a thousand bare-metal servers with zero downtime, automated with Chef and Ansible, and chased down the ones that didn't come back.</p></div>
 <a class="handoff" href="#traffic"><svg class="ic"><use href="#i-down"/></svg>and out to the world</a>
 </div></section>
@@ -186,8 +186,8 @@
 <svg id="tmap" viewBox="0 0 680 340" role="img" aria-label="World map with live traffic dots in about 80 cities"></svg>
 <div class="al hide" id="talert"><svg class="ic"><use href="#i-bell"/></svg><div><div class="tx">5xx rising on POST /v1/push/approve</div><div class="sm">region: us-west-1 · paging on-call…</div></div></div>
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
-<p>Worked on software serving live traffic from users in nearly every country, and the CI/CD pipelines that deploy it.</p></div>
+<div class="part">
+<p>Worked on software used daily by millions of people across the globe, and the CI/CD pipelines that deploy it.</p></div>
 <a class="handoff" href="#observability"><svg class="ic"><use href="#i-down"/></svg>then us-west-1 lit up</a>
 </div></section>
 <!-- 7 · observability -->
@@ -216,7 +216,7 @@
 </div>
 </div>
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Built and operated monitoring and alerting across cloud and on-prem, including Splunk clusters and dashboards, covering system, app, and external user-probe metrics.</p></div>
 <a class="handoff" href="#oncall"><svg class="ic"><use href="#i-down"/></svg>and the pager went off</a>
 </div></section>
@@ -240,7 +240,7 @@
 <div class="m"><div class="av im">IM</div><div><div class="who">Incident Manager<span>10:42</span></div><div class="tx">Looks good. Closing the incident.</div></div></div>
 </div>
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Took on weekly on-call duties (12x7) and started within the first month of my career. Experienced in prioritizing what actually matters during a production outage. After every outage: RCA, postmortem, and action items for stability.</p>
 <a class="blog" href="https://rr2.dev/posts/tackling-oncall/"><small><svg class="ic" style="width:13px;height:13px"><use href="#i-file"/></svg>On my blog</small><b>A beginner's guide to tackling oncall responsibilities like a pro</b></a></div>
 <a class="handoff" href="#resilience"><svg class="ic"><use href="#i-down"/></svg>breaking things on purpose</a>
@@ -253,7 +253,7 @@
 <div class="tile a2"><svg viewBox="0 0 140 130" role="img" aria-label="A server disk fills up with logs until it is full"><rect x="12" y="30" width="116" height="66" rx="9" fill="#D3D9E2"/><circle cx="20" cy="38" r="2" fill="#B5BDC9"/><circle cx="120" cy="38" r="2" fill="#B5BDC9"/><circle cx="20" cy="88" r="2" fill="#B5BDC9"/><circle cx="120" cy="88" r="2" fill="#B5BDC9"/><text x="22" y="54" style="font:600 10px var(--mono);fill:#2E3546">/var/log</text><rect x="22" y="62" width="96" height="12" rx="3" fill="#FFFFFF"/><rect class="f" x="22" y="62" width="12" height="12" rx="3" fill="#16946C"/><circle class="led" cx="114" cy="50" r="3.5" fill="#16946C"/><g class="lg" style="font:9px var(--mono);fill:#7A8396"><text x="70" y="114" text-anchor="middle">app.log  +2 GB/min</text></g><text class="th p" x="70" y="22" text-anchor="middle" style="fill:#C2302F;font-family:var(--mono)">99% full</text></svg><div class="cap">Disk fills up</div></div>
 <div class="tile a3"><svg viewBox="0 0 140 130" role="img" aria-label="CPU maxes out"><path class="g" d="M20 100A50 50 0 0 1 120 100" fill="none" stroke="#16946C" stroke-width="10" stroke-linecap="round"/><line class="n" x1="70" y1="100" x2="70" y2="60" stroke="#1A1F2B" stroke-width="4" stroke-linecap="round"/><circle cx="70" cy="100" r="7" fill="#1A1F2B"/><text class="th p" x="70" y="124" text-anchor="middle" style="fill:#C2302F;font-family:var(--mono)">94%</text></svg><div class="cap">CPU maxes out</div></div>
 </div></div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Helped build a resilience testing framework from scratch and contributed to an open-source chaos tool. Broke these on purpose, before production could.</p>
 <a class="lk" href="https://www.youtube.com/watch?v=PA2Pw_0CnHc">Watch my talk on it <svg class="ic"><use href="#i-ext"/></svg></a></div>
 <a class="handoff" href="#ai"><svg class="ic"><use href="#i-down"/></svg>what I build with AI</a>
@@ -284,7 +284,7 @@
 <a class="lkk" href="https://phones.rr2.dev/">Open <svg class="ic"><use href="#i-ext"/></svg></a></div></div>
 </div>
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>I build with Claude Code and Cursor: spec, design system, build, test, security pass, ship. Every project here was built solo, from idea to shipped.</p>
 <a class="lk" href="https://rr2.dev/posts/seabw2026bangkok-hackathon-top-10/">How I made top 10 at a 24-hour AI hackathon <svg class="ic"><use href="#i-ext"/></svg></a>
 <p class="rdg">Currently reading <a href="https://www.oreilly.com/library/view/ai-engineering/9781098166298/">AI Engineering</a> by Chip Huyen to improve my fundamentals.</p></div>
@@ -300,7 +300,7 @@
 <article class="tk"><div class="pst p2"><svg viewBox="0 0 160 90" role="img" aria-label="Pitching on stage to judges"><rect width="160" height="90" fill="#2A2234"/><path class="sp" d="M62 0h36l22 70H40Z" fill="rgba(255,214,140,.22)"/><rect x="66" y="48" width="28" height="22" rx="2" fill="#4A3F5A"/><circle cx="80" cy="38" r="6" fill="#E6C9A8"/><rect x="74" y="44" width="12" height="6" rx="2" fill="#9A2547"/><rect x="0" y="70" width="160" height="20" fill="#1B1623"/><g fill="#5A5068"><circle cx="40" cy="80" r="5"/><circle cx="62" cy="80" r="5"/><circle cx="98" cy="80" r="5"/><circle cx="120" cy="80" r="5"/></g><g class="rb"><rect x="112" y="8" width="40" height="16" rx="3" fill="#D4A82E"/><text x="132" y="19" text-anchor="middle" style="font:700 8px var(--mono);fill:#2A2234">TOP 10</text></g></svg></div>
 <div class="meta"><span class="dt">May 2026</span><span class="ty">Hackathon pitch</span></div><div class="t">Hackathon pitch</div><div class="v">SEABW (South East Asia Blockchain Week), Bangkok. Pitched to a panel of judges on short notice.</div>
 <div class="ls"><a href="https://www.youtube.com/watch?v=M7V4j2BNFh4"><svg class="ic"><use href="#i-play"/></svg>Pitch</a><a href="https://rr2.dev/posts/seabw2026bangkok-hackathon-top-10/"><svg class="ic"><use href="#i-file"/></svg>Write-up</a></div></article>
-<article class="tk"><div class="pst p3"><svg viewBox="0 0 160 90" role="img" aria-label="Title slide: a figure wearing a name label that says Rahul"><rect width="160" height="90" fill="#f3f4f0"/><text x="12" y="34" style="font:700 10px var(--sans);fill:#16181d">Labels We Give</text><text x="12" y="47" style="font:700 10px var(--sans);fill:#16181d">Ourselves</text><text x="12" y="62" style="font:500 6.5px var(--sans);fill:#5f6672">and outgrowing them</text><g transform="translate(103 11) scale(.285)"><rect x="58" y="196" width="16" height="58" rx="8" fill="#2f4fd8"/><rect x="86" y="196" width="16" height="58" rx="8" fill="#2f4fd8"/><rect x="16" y="104" width="18" height="76" rx="9" fill="#2f4fd8"/><rect x="126" y="104" width="18" height="76" rx="9" fill="#2f4fd8"/><rect x="34" y="92" width="92" height="116" rx="32" fill="#2f4fd8"/><circle cx="80" cy="50" r="32" fill="#4565ea"/><circle cx="70" cy="50" r="4" fill="#fff"/><circle cx="90" cy="50" r="4" fill="#fff"/><rect x="45" y="118" width="70" height="44" rx="5" fill="#fff" stroke="#c9ccc4" stroke-width="1.5"/><text x="80" y="145" text-anchor="middle" style="font:700 17px 'Marker Felt','Comic Sans MS',cursive;fill:#16181d">Rahul</text></g><g transform="translate(84 16) rotate(-8)"><rect x="-15" y="-7" width="30" height="14" rx="3" fill="#ffd23f" stroke="rgba(0,0,0,.18)" stroke-width=".6"/><text x="0" y="3" text-anchor="middle" style="font:700 7px 'Marker Felt','Comic Sans MS',cursive;fill:#16181d">hello!</text></g></svg></div>
+<article class="tk"><div class="pst p3"><svg viewBox="0 0 160 90" role="img" aria-label="Title slide: a figure wearing a name label that says Rahul"><rect width="160" height="90" fill="#f3f4f0"/><text x="12" y="34" style="font:700 10px var(--sans);fill:#16181d">Labels We Give</text><text x="12" y="47" style="font:700 10px var(--sans);fill:#16181d">Ourselves</text><text x="12" y="62" style="font:500 6.5px var(--sans);fill:#5f6672">and outgrowing them</text><g transform="translate(103 11) scale(.285)"><rect x="58" y="196" width="16" height="58" rx="8" fill="#2f4fd8"/><rect x="86" y="196" width="16" height="58" rx="8" fill="#2f4fd8"/><rect x="16" y="104" width="18" height="76" rx="9" fill="#2f4fd8"/><rect x="126" y="104" width="18" height="76" rx="9" fill="#2f4fd8"/><rect x="34" y="92" width="92" height="116" rx="32" fill="#2f4fd8"/><circle cx="80" cy="50" r="32" fill="#4565ea"/><circle cx="70" cy="50" r="4" fill="#fff"/><circle cx="90" cy="50" r="4" fill="#fff"/><rect x="45" y="118" width="70" height="44" rx="5" fill="#fff" stroke="#c9ccc4" stroke-width="1.5"/><text x="80" y="145" text-anchor="middle" style="font:600 17px var(--sans);fill:#16181d">Rahul</text></g><g transform="translate(84 16) rotate(-8)"><rect x="-15" y="-7" width="30" height="14" rx="3" fill="#ffd23f" stroke="rgba(0,0,0,.18)" stroke-width=".6"/><text x="0" y="3" text-anchor="middle" style="font:600 7px var(--sans);fill:#16181d">hello!</text></g></svg></div>
 <div class="meta"><span class="dt">Oct 2026</span><span class="ty">Guest talk</span></div><div class="t">Labels We Give Ourselves and Outgrowing Them</div><div class="v">Open Loop Social, Build Hours (special guest edition). Online, with a live demo of the Reading Room.</div>
 <div class="ls"><a href="https://notes.rr2.dev/worklog/talk-labels-we-give-ourselves/"><svg class="ic"><use href="#i-file"/></svg>Worklog post</a></div></article>
 </div>
@@ -311,7 +311,7 @@
 <p class="papers pw"><svg class="ic"><use href="#i-file"/></svg>3 co-authored papers shortlisted as posters at an internal global tech conference.</p>
 
 </div>
-<div class="part"><div class="ph"><span>What I did</span></div>
+<div class="part">
 <p>Speaking at meetups and hackathons, and at work: project updates, proposals for review to architects and leadership, and training for new joiners.</p></div>
 <a class="handoff" href="#notes"><svg class="ic"><use href="#i-down"/></svg>what teammates said</a>
 </div></section>
@@ -328,7 +328,7 @@
 </div></section>
 <!-- 14 · summary -->
 <section class="stop" id="summary" data-stop><div class="wrap">
-<p class="eyebrow">Building and sharing</p><h2>One engineer, every layer</h2>
+<h2>One engineer, every layer</h2>
 <div class="scene">
 <svg id="ssvg" viewBox="0 0 680 470" role="img" aria-label="Four areas around Rahul: reliability, security and identity, infrastructure, and building">
 <defs><clipPath id="scc"><circle cx="340" cy="235" r="54"/></clipPath></defs>
@@ -346,8 +346,8 @@
 <div><b style="color:#2F6DB3">Infrastructure</b><span>Fleet upgrades, CI/CD, Cert rotation, Edge</span></div>
 <div><b style="color:#8E5305">Building</b><span>Experiments, Data analysis, Personal projects, AI</span></div>
 </div>
-<p class="sumline">Reliability, security, infrastructure, and building: experience across every layer of the stack.</p>
-<p class="also">Also: talks, mentoring and hiring.</p>
+
+
 <div class="cta"><a class="book" href="https://meet.rr2.dev"><svg class="ic"><use href="#i-mail"/></svg>Book a call</a><a class="blogbtn" href="https://rr2.dev/posts/"><svg class="ic"><use href="#i-file"/></svg>Read the blog</a></div>
 <div class="contact">
 <a href="https://rr2.dev/about/"><svg class="ic"><use href="#i-file"/></svg>README</a>
