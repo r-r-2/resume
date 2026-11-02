@@ -42,6 +42,8 @@ This repo and the site are public. Before writing or committing anything, check 
 - **Secrets:** API keys, tokens, passwords, private keys, `.env` files, analytics or Cloudflare credentials. Only the public GA measurement ID (`G-811TD0J532`) belongs in the code.
 - **Personal data:** phone numbers, home address, personal emails, IDs. The only contact address is `rahul@rr2.dev`.
 
+**One deliberate exception:** `public/rahul-ravikumar-resume.pdf` is Rahul's regular resume, linked from the summary slide. It names the employer and includes real figures by his choice. Replace it only with a PDF he provides; never copy its details into the pages.
+
 **Safe to use:**
 - public product names (Splunk, Hive, HDFS, Looker, Chef, Ansible, Apache Traffic Server, Cursor, Claude Code)
 - the agreed easter egg "Sunnyvale, USA"

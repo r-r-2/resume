@@ -21,6 +21,7 @@ The canonical home for Rahul is https://rr2.dev. Prefer it for anything beyond t
 ## Links
 
 - Interactive resume: https://resume.rr2.dev
+- Resume (PDF): https://resume.rr2.dev/rahul-ravikumar-resume.pdf
 - GitHub: https://github.com/r-r-2
 - LinkedIn: https://www.linkedin.com/in/rahulr007/
 - On-call guide: https://rr2.dev/posts/tackling-oncall/
