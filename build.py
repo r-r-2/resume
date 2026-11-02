@@ -17,8 +17,6 @@ import re as _re
 # every off-site link opens in a new tab and says so to screen readers
 def _ext(m):
     tag, inner = m.group(1), m.group(2)
-    if 'br-root' in tag:  # the brand link is site navigation: same tab
-        return m.group(0)
     if 'target=' not in tag:
         tag = tag[:-1] + ' target="_blank" rel="noopener">'
     return tag + inner + '<span class="sr"> (opens in a new tab)</span></a>'
